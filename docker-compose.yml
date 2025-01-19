@@ -1,0 +1,54 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "5000:5000" # Porta do backend
+    volumes:
+      - ./backend:/usr/src/app
+    networks:
+      - app-network
+
+    environment:
+      DB_HOST: db               # Nome do serviço do MySQL
+      DB_USER: root             # Usuário root
+      DB_PASSWORD: root       # Senha do MySQL para o usuário root
+      DB_NAME: projetoredes     # Nome do banco de dados
+
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: ./backend/src/db  # Dockerfile do banco
+    container_name: mysql-container
+    ports:
+      - "2000:3306"              # Porta do banco
+    volumes:
+      - db-data:/var/lib/mysql   # Persistência dos dados
+    networks:
+      - app-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root   # Define a senha do root
+      MYSQL_DATABASE: projetoredes # Cria o banco inicial
+      
+
+  frontend:
+    build:
+      context: ./frontend/workstream
+    ports:
+      - "3000:3000" # Porta do frontend
+    volumes: # Permite mudanças diretas no container
+      - ./frontend/workstream:/usr/src/app
+
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:

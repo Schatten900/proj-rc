@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+.sidebarButtonInactive{
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-style: solid;
+    color: #fff;
+    border-color:rgba(128, 128, 128, 0.438);
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+.sidebarButton{
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-style: solid;
+    color: #fff;
+    border-color:rgba(128, 128, 128, 0.438);
+    border-radius: 10px;
+    border-width: 2px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
+}
+.sidebarButton:hover{
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color:  rgba(255, 255, 255, 0.283);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border: none;
+    outline: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color:#fff;
+    border-width: 2px;
+}
+
+.menu{
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 500ms;
+    width: 24rem;
+    height: 100vh;
+}   
+
+.menu.active{
+    left: 0;
+    transition: 500 ms;
+}
+
+
+.leaveButton{
+    position: absolute;
+    color: #fff;
+    top: 0.5rem;
+    left: 0.5rem;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
+}
+
+.leaveButton:hover{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color:  rgba(255, 255, 255, 0.283);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border: none;
+    outline: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.closeContainer{
+    background-color:  #058f8f;
+    border-style: solid;
+    height: 8%;
+    width: 24rem;
+    align-items: center; 
+    justify-content: right;
+}
+
+.xButton{
+    position: absolute;
+    color: #fff;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
+}
+
+.xButton:hover{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color:  rgba(255, 255, 255, 0.283);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border: none;
+    outline: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.profileContainer{
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.profilePicture{
+    height: auto;
+    width: 3.5rem;
+}
+
+.progress-bar{
+    width : 8rem;
+    height: 1rem;
+    background-color: #e6e6e6;
+    border-radius:10px;
+}
+
+.progress-bar-fill{
+    height:100%;
+    border-radius:10px;
+    background-color: #4f7cec;
+    transition: width 0.5s ease-out;
+}
+
+.level{ 
+    padding: 0 0.5rem;
+}
+.username{
+    padding: 0 0.5rem;
+}
+
+.division{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(178, 178, 178);
+}
+
+.groupsContainer {
+    padding: 1rem;          
+    flex-grow: 1;           
+    overflow-y: auto;        
+    height: calc(100vh - 200px);
+}
+
+.groupList {
+    list-style-type: none;   
+    padding: 0;               
+    margin: 0;                
+}
+
+.groupItem {
+    padding: 1rem;            
+    margin: 0.5rem 0;       
+    background-color: #f0f0f0; 
+    border-radius: 8px;       
+    cursor: pointer;       
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.groupItem:hover {
+    background-color: #78a1e9; 
+    transform: scale(1.05);     
+}
+
+.groupList p {
+    text-align: center;
+    color: #888;               
+}
+
+
+.groupItem.selected {
+    background-color: #8fb3f0; 
+    color: white;              
+}
